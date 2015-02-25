@@ -22,12 +22,12 @@ const (
 )
 
 var (
-	config            Config
+	config            configSettings
 	writeconfig       bool
 	configfile        string
-	allAttributes     []string = []string{"*"}
-	shortAttributes   []string = []string{"cn", "distinguishedName"}
-	defaultAttributes []string = []string{
+	allAttributes     = []string{"*"}
+	shortAttributes   = []string{"cn", "distinguishedName"}
+	defaultAttributes = []string{
 		"accountExpires",
 		"badPasswordTime",
 		"badPwdCount",
@@ -54,13 +54,13 @@ var (
 	}
 )
 
-var verbosity [][]string = [][]string{
+var verbosity = [][]string{
 	shortAttributes,
 	defaultAttributes,
 	allAttributes,
 }
 
-type Config struct {
+type configSettings struct {
 	BaseDn    string
 	Hostname  string
 	Password  string
