@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	"gopkg.in/ldap.v0"
+	"github.com/go-ldap/ldap/v3"
 )
 
 const (
